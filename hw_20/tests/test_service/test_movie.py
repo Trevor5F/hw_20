@@ -27,9 +27,9 @@ def movie():
     return movie_dao
 
 
-class TestDirectorService:
+class TestMovierService:
     @pytest.fixture(autouse=True)
-    def director_service(self, movie):
+    def movie_service(self, movie):
         self.movie_service = MovieService(dao=movie)
 
     def test_get_one(self):
